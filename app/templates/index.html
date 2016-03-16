@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% from 'macros.html' import render_field %}
+
+{% block content %}
+    <div class="site-title">
+        <h2><b>Login</b></h2>
+    </div>
+
+    <div class="post">
+        <div class="form-group">
+            <form class="" method="POST" action="">
+                 {{ form.hidden_tag() }}
+                {% for field in form %}
+                    <!-- <label for="text">Username:</label>  -->
+                    {{ render_field(field) }} <br>
+                {% endfor %}
+                <center>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </center>               
+            </form>
+        </div>
+    </div>
+{% endblock %}
