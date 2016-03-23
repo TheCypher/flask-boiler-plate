@@ -1,8 +1,9 @@
 from app import app
-
-DEBUG = True
-PORT = 8000
-HOST = '0.0.0.0'
+import config
 
 if __name__ == '__main__':
-	app.run(debug=DEBUG, host=HOST, port=PORT)
+	app.run(
+		debug=config.SERVER['DEBUG'], 
+		host=config.SERVER['HOST'], 
+		port=config.SERVER['PORT']
+	)
